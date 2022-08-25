@@ -91,7 +91,7 @@ struct loginView: View {
             login()
             
         }
-        .padding(.top, -110)
+        .padding(.top, 2)
         
         
     }
@@ -104,8 +104,8 @@ struct login : View {
     @State var showAlert:Bool = false
     @State var errorTitle = ""
     @State private var selectedCountry: String = ""
-    @State private var IsActive = false
-    
+    // @State private var IsActive = false
+    @State private var isActive = false
     var body: some View
     {
         
@@ -125,9 +125,7 @@ struct login : View {
                         Text("+91")
                             .font(.system(size: 17))
                         // .foregroundColor(Color.black)
-                        
                     }
-   
                 })
                 {
                     Picker("Country", selection: $selectedCountry) {
@@ -143,20 +141,20 @@ struct login : View {
             }
             
             .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(.blue,lineWidth: 1))
+                .stroke(.white,lineWidth: 1))
             
             TextField("Enter name ", text: $name)
                 .padding()
                 .frame(width: 340, height: 45)
                 .overlay(RoundedRectangle(cornerRadius: 10)
-                    .stroke(.blue,lineWidth: 1))
+                    .stroke(.white,lineWidth: 1))
             
             
             TextField("Enter Email", text: $Email)
                 .padding()
                 .frame(width: 340, height: 45)
                 .overlay(RoundedRectangle(cornerRadius: 10)
-                    .stroke(.blue,lineWidth: 1))
+                    .stroke(.white,lineWidth: 1))
             
             
         }
@@ -182,9 +180,13 @@ struct login : View {
         .padding(.bottom, 20)
         //MARK: -  SignIn Button
         
+        NavigationLink(destination: HomeView(userName: $name, mobileNumber: $Mobile), isActive: $isActive)
+        { EmptyView() }
+        
         Button(action: {
-            self.validation()
-            self.IsActive = true
+          //  self.validation()
+            // self.IsActive = true
+            self.isActive = true
         })
         {
             Text("SIGN IN")
@@ -208,6 +210,7 @@ struct login : View {
         
         navigation(text:"FORGOT PASSWORD?", nextView: ForgotPasswordView())
             .foregroundColor(Color.white)
+        
         
     }
     

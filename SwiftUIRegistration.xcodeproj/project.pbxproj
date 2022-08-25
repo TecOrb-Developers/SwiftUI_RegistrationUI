@@ -29,6 +29,9 @@
 		182F1F6C28B6200D006196E5 /* TextFieldCustome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F6B28B6200D006196E5 /* TextFieldCustome.swift */; };
 		182F1F6E28B62016006196E5 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F6D28B62016006196E5 /* BackButton.swift */; };
 		182F1F7028B65327006196E5 /* otpDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F6F28B65327006196E5 /* otpDemo.swift */; };
+		182F1F7328B74BBA006196E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F7228B74BBA006196E5 /* HomeView.swift */; };
+		182F1F7528B77531006196E5 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F7428B77531006196E5 /* SideMenuView.swift */; };
+		188CC1F728B7B11B0049DF68 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1F628B7B11B0049DF68 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		182F1F6B28B6200D006196E5 /* TextFieldCustome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCustome.swift; sourceTree = "<group>"; };
 		182F1F6D28B62016006196E5 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		182F1F6F28B65327006196E5 /* otpDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otpDemo.swift; sourceTree = "<group>"; };
+		182F1F7228B74BBA006196E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		182F1F7428B77531006196E5 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		188CC1F628B7B11B0049DF68 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		182F1F5028B6180E006196E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				182F1F7128B74BA3006196E5 /* Home  */,
 				182F1F2828B617FF006196E5 /* ContentView.swift */,
 				182F1F6128B61FD4006196E5 /* SwiftUIView3.swift */,
 				182F1F5B28B61FB9006196E5 /* LanguageSelectionView.swift */,
@@ -194,6 +201,16 @@
 				182F1F6728B61FFC006196E5 /* Validation.swift */,
 			);
 			path = HelpingFiles;
+			sourceTree = "<group>";
+		};
+		182F1F7128B74BA3006196E5 /* Home  */ = {
+			isa = PBXGroup;
+			children = (
+				182F1F7228B74BBA006196E5 /* HomeView.swift */,
+				182F1F7428B77531006196E5 /* SideMenuView.swift */,
+				188CC1F628B7B11B0049DF68 /* SettingView.swift */,
+			);
+			path = "Home ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,14 +344,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				182F1F5E28B61FC3006196E5 /* SwiftUIView5.swift in Sources */,
+				188CC1F728B7B11B0049DF68 /* SettingView.swift in Sources */,
 				182F1F5628B61F98006196E5 /* SwiftUIView1.swift in Sources */,
 				182F1F6628B61FEB006196E5 /* OtpView.swift in Sources */,
 				182F1F6228B61FD4006196E5 /* SwiftUIView3.swift in Sources */,
+				182F1F7528B77531006196E5 /* SideMenuView.swift in Sources */,
 				182F1F6828B61FFC006196E5 /* Validation.swift in Sources */,
 				182F1F5428B61F7E006196E5 /* Model.swift in Sources */,
 				182F1F6C28B6200D006196E5 /* TextFieldCustome.swift in Sources */,
 				182F1F5828B61FA4006196E5 /* ResetPasswordView.swift in Sources */,
 				182F1F6E28B62016006196E5 /* BackButton.swift in Sources */,
+				182F1F7328B74BBA006196E5 /* HomeView.swift in Sources */,
 				182F1F6428B61FE3006196E5 /* SignUpView.swift in Sources */,
 				182F1F2928B617FF006196E5 /* ContentView.swift in Sources */,
 				182F1F2728B617FF006196E5 /* SwiftUIRegistrationApp.swift in Sources */,
