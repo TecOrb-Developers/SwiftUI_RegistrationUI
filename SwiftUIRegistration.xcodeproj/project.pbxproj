@@ -32,6 +32,8 @@
 		182F1F7328B74BBA006196E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F7228B74BBA006196E5 /* HomeView.swift */; };
 		182F1F7528B77531006196E5 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F1F7428B77531006196E5 /* SideMenuView.swift */; };
 		188CC1F728B7B11B0049DF68 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1F628B7B11B0049DF68 /* SettingView.swift */; };
+		188CC1F928B8D2EE0049DF68 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1F828B8D2EE0049DF68 /* CameraButtonView.swift */; };
+		188CC1FB28B8E34F0049DF68 /* gallerypicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1FA28B8E34F0049DF68 /* gallerypicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		182F1F7228B74BBA006196E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		182F1F7428B77531006196E5 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		188CC1F628B7B11B0049DF68 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		188CC1F828B8D2EE0049DF68 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
+		188CC1FA28B8E34F0049DF68 /* gallerypicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gallerypicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,7 @@
 				182F1F6B28B6200D006196E5 /* TextFieldCustome.swift */,
 				182F1F6928B62005006196E5 /* Navigate.swift */,
 				182F1F6728B61FFC006196E5 /* Validation.swift */,
+				188CC1FA28B8E34F0049DF68 /* gallerypicker.swift */,
 			);
 			path = HelpingFiles;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				182F1F7228B74BBA006196E5 /* HomeView.swift */,
 				182F1F7428B77531006196E5 /* SideMenuView.swift */,
 				188CC1F628B7B11B0049DF68 /* SettingView.swift */,
+				188CC1F828B8D2EE0049DF68 /* CameraButtonView.swift */,
 			);
 			path = "Home ";
 			sourceTree = "<group>";
@@ -355,6 +361,8 @@
 				182F1F5828B61FA4006196E5 /* ResetPasswordView.swift in Sources */,
 				182F1F6E28B62016006196E5 /* BackButton.swift in Sources */,
 				182F1F7328B74BBA006196E5 /* HomeView.swift in Sources */,
+				188CC1FB28B8E34F0049DF68 /* gallerypicker.swift in Sources */,
+				188CC1F928B8D2EE0049DF68 /* CameraButtonView.swift in Sources */,
 				182F1F6428B61FE3006196E5 /* SignUpView.swift in Sources */,
 				182F1F2928B617FF006196E5 /* ContentView.swift in Sources */,
 				182F1F2728B617FF006196E5 /* SwiftUIRegistrationApp.swift in Sources */,
@@ -523,6 +531,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIRegistration/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -551,6 +562,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIRegistration/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

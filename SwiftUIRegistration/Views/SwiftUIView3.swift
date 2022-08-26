@@ -28,14 +28,28 @@ struct SwiftUIView3: View {
                         HStack{
                             ForEach(nameArr.indices){ index  in
                                 Rectangle()
-                                
-                                    .fill(Color.blue)
-                                    .frame(width: 350, height: 200)
-                                    .cornerRadius(10)
+                                    .frame(width: 350, height: 200,alignment: Alignment.leading)
+                                    .background(.blue)
+                                    .cornerRadius(25)
                                     .shadow(color: .black, radius: 1)
                                     .opacity(0.5)
+                               /// VStack(alignment: .leading){
+                             .overlay(Text("\(nameArr[index])"))
+                                        .foregroundColor(Color.white)
+                                        .padding(.leading,10)
                                 
-                                    .padding()
+                                //}
+                                   
+                                    
+                                 
+                                   
+                                   
+                                   
+                                    //.cornerRadius(25)
+                                    
+                                   
+                               
+                                  //  .padding()
                                 //
                             }
                         }

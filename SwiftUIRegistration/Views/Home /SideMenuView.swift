@@ -10,8 +10,12 @@ import SwiftUI
 struct SideMenuView: View {
     @Binding var userName:String
     @Binding var mobileNumber:String
+    @State var showActionSheet:Bool = false
+    @State var isShown:Bool = false
     var body: some View {
-        
+        ZStack
+        {
+            
         VStack{
             VStack(alignment: .leading){
                 NavigationLink(destination: HomeView(userName: $userName, mobileNumber: $mobileNumber))
@@ -21,23 +25,52 @@ struct SideMenuView: View {
                         .padding(.top,30)
                     
                 }
-                .padding(.leading, -160)
-                .padding(.top,-30)
+                .padding(.leading, 12)
+                .padding(.top,1)
 // MARK: To Show username And Mobile
-                VStack{
-                let user = userName == "" ? "Om Singh" : "\(userName)"
-                    let mobile = mobileNumber == "" ? "9090909090": "\(mobileNumber)"
-                    
-                    Text("Hii \(user)")
-                        .padding(.leading, -180)
-                        .padding(.top,10)
-                        .font(.headline)
-                       
-                    Text("\(mobile)")
-                        .padding(.leading, -180)
+                HStack(spacing:10){
+                        Button(action:
+                              {
+                            self.showActionSheet.toggle()
+                          })
+                          {
+                            RoundedRectangle(cornerRadius: 30)
+                                .frame(width: 38, height: 38, alignment: .center)
+                                .foregroundColor(Color.white)
+                                .overlay(
+                                   RoundedRectangle(cornerRadius: 30))
+                                .frame(width: 36, height: 36, alignment: .center)
+                                .foregroundColor(Color.init(red: 232/255, green: 233/255, blue: 231/255))
+                                .overlay(
+                                  Image("image_profile")
+                                  )
+                               // .offset(x:-1, y: 1)
+                                .padding(.trailing,250)
+                          }
+                          let user = userName == "" ? "Om Singh" : "\(userName)"
+                            let mobile = mobileNumber == "" ? "9090909090": "\(mobileNumber)"
+                          Text("Hii \(user)")
+                            .padding(.leading, -240)
+                            .padding(.top,10)
+                            .font(.headline)
+                            
+                          Text("\(mobile)")
+                            .padding(.leading, -267)
+                            .padding()
+                            .padding(.top,-30)
+                        }
                         .padding()
-                        .padding(.top,-20)
-                }
+                        .actionSheet(isPresented: $showActionSheet, content: {()->ActionSheet in
+                          ActionSheet(title: Text("Select image"), message: Text("Please select an image from the gallary or use Camera"), buttons: [ActionSheet.Button.default(Text("Camera"),action: {
+                             
+                          }),
+                          ActionSheet.Button.default(Text("Photo Gallery"),action:{
+                              self.isShown.toggle()
+                          }),
+                          ActionSheet.Button.cancel()
+                        ])
+                        
+                      })
                
               
             }
@@ -76,7 +109,7 @@ struct SideMenuView: View {
                 .padding(.leading,10)
                 
                 HStack(spacing: 5){
-                    NavigationLink(destination: SettingView())
+                    NavigationLink(destination: SettingView(userName: $userName, userNumber: $mobileNumber))
                     {
                     Image("sidemenu_settings-1")
                     Text(" Settings")
@@ -96,11 +129,17 @@ struct SideMenuView: View {
                 .padding(.leading,10)
             }
 // MARK: To Move left right Table List
-            .padding(.leading, -20)
+            .padding(.leading, 40)
             .padding(.top, -20)
             .padding(.trailing, -20)
             .padding(.bottom, 230)
         }
+            if isShown
+            {
+                ImagePicker()
+            }
+           
+    }
 // MARK: full Screeen VStack
         .frame(
               minWidth: 0,
