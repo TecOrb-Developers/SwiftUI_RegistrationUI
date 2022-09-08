@@ -12,12 +12,6 @@ class otpViewModel:ObservableObject{
     @Published var otpField:[String] = Array(repeating: "", count: 6)
 }
 
-
-class User : ObservableObject{
-    @Published var name: String = String()
-}
-
-
 class ViewModel: ObservableObject {
     
     @Published var otpField = "" {
@@ -74,4 +68,11 @@ class ViewModel: ObservableObject {
     
     @Published var showResendText = false
 
+}
+
+
+class User:ObservableObject
+{
+  @Published var  name:String = String()
+    @Published var mobile:String = String()
 }

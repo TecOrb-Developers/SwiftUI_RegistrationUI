@@ -14,10 +14,11 @@ struct SwiftUIView5: View {
             LinearGradient(gradient: .init(colors: [.blue,.red]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
             
             loginView()
-            
+           
         }
         .navigationBarBackButtonHidden(true) // Hide default button
         .navigationBarItems(leading: NavBackButton(dismiss: self.dismiss))
+       // .navigationBarItems(leading: NavBackButton(text: "Go back", nextImage: "popup_green_check_circle-1", dismiss: self.dismiss))
     }
 }
 
@@ -178,7 +179,8 @@ struct login : View {
             Text("Of Homp")
         }
         .padding(.bottom, 20)
-        //MARK: -  SignIn Button
+        
+//MARK: -  Button inside Navigation
         
         NavigationLink(destination: HomeView(userName: $name, mobileNumber: $Mobile), isActive: $isActive)
         { EmptyView() }

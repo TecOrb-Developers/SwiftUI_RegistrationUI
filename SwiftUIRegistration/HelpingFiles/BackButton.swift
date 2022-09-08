@@ -12,18 +12,37 @@ import SwiftUI
 import Foundation
 import SwiftUI
 
-struct NavBackButton: View {
-  
+struct NavBackButton:View {
+    @State var text = ""
+   // @State var color:Color?
+   // var nextImage: targetImage
     let dismiss: DismissAction
     
     var body: some View {
         Button {
             dismiss()
         } label: {
-            Image("back_icon_second")
+            Image("back_arrow_black")
                 
-            Text("Go Back")
-                  .foregroundColor(Color.red)
+            Text("\(text)")
+            foregroundColor(Color.red)
         }
     }
 }
+//struct NavBackButton<targetImage:View>:View {
+//    @State var text = ""
+//   // @State var color:Color?
+//    var nextImage: targetImage
+//    let dismiss: DismissAction
+//
+//    var body: some View {
+//        Button {
+//            dismiss()
+//        } label: {
+//            Image("\(nextImage)")
+//
+//            Text("\(text)")
+//
+//        }
+//    }
+//}

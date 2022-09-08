@@ -10,12 +10,12 @@ import SwiftUI
 struct SideMenuView: View {
     @Binding var userName:String
     @Binding var mobileNumber:String
-    @State var showActionSheet:Bool = false
     @State var isShown:Bool = false
+    @State var showActionSheet:Bool = false
+   
     var body: some View {
         ZStack
         {
-            
         VStack{
             VStack(alignment: .leading){
                 NavigationLink(destination: HomeView(userName: $userName, mobileNumber: $mobileNumber))
@@ -28,25 +28,30 @@ struct SideMenuView: View {
                 .padding(.leading, 12)
                 .padding(.top,1)
 // MARK: To Show username And Mobile
-                HStack(spacing:10){
-                        Button(action:
-                              {
-                            self.showActionSheet.toggle()
-                          })
+                HStack(spacing:5){
+                   
+// MARK: To Show username And Mobile
+                  
+                    Button(action:
                           {
-                            RoundedRectangle(cornerRadius: 30)
-                                .frame(width: 38, height: 38, alignment: .center)
-                                .foregroundColor(Color.white)
-                                .overlay(
-                                   RoundedRectangle(cornerRadius: 30))
-                                .frame(width: 36, height: 36, alignment: .center)
-                                .foregroundColor(Color.init(red: 232/255, green: 233/255, blue: 231/255))
-                                .overlay(
-                                  Image("image_profile")
-                                  )
-                               // .offset(x:-1, y: 1)
-                                .padding(.trailing,250)
-                          }
+                        self.showActionSheet.toggle()
+                        
+                      })
+                      {
+                        RoundedRectangle(cornerRadius: 30)
+                            .frame(width: 38, height: 38, alignment: .center)
+                            .foregroundColor(Color.white)
+                            .overlay(
+                               RoundedRectangle(cornerRadius: 30))
+                            .frame(width: 36, height: 36, alignment: .center)
+                            .foregroundColor(Color.init(red: 232/255, green: 233/255, blue: 231/255))
+                            .overlay(
+                              Image("image_profile")
+                              )
+                           // .offset(x:-1, y: 1)
+                            .padding(.trailing,250)
+                      }
+
                           let user = userName == "" ? "Om Singh" : "\(userName)"
                             let mobile = mobileNumber == "" ? "9090909090": "\(mobileNumber)"
                           Text("Hii \(user)")
@@ -55,22 +60,31 @@ struct SideMenuView: View {
                             .font(.headline)
                             
                           Text("\(mobile)")
-                            .padding(.leading, -267)
+                            .padding(.leading, -260)
                             .padding()
                             .padding(.top,-30)
-                        }
+                    NavigationLink(destination: ProfileView(FirstName: $userName, MobileNo1: $mobileNumber))
+                                            {
+                                Text("EDIT")
+                                .foregroundColor(Color.black)
+                                   }
+                                    .frame(width: 40, height: 40)
+                                    .padding(.leading,-60)
+                    
+                     }
                         .padding()
-                        .actionSheet(isPresented: $showActionSheet, content: {()->ActionSheet in
-                          ActionSheet(title: Text("Select image"), message: Text("Please select an image from the gallary or use Camera"), buttons: [ActionSheet.Button.default(Text("Camera"),action: {
-                             
-                          }),
-                          ActionSheet.Button.default(Text("Photo Gallery"),action:{
-                              self.isShown.toggle()
-                          }),
-                          ActionSheet.Button.cancel()
-                        ])
-                        
-                      })
+               
+// MARK: To Show Image Gallery Pickup
+              .actionSheet(isPresented: $showActionSheet, content: {()->ActionSheet in
+                  ActionSheet(title: Text("Select image"), message: Text("Please select an image from the gallary or use Camera"), buttons: [ActionSheet.Button.default(Text("Camera"),action: {
+                     
+                  }),
+                  ActionSheet.Button.default(Text("Photo Gallery"),action:{
+                      self.isShown.toggle()
+                  }),
+                  ActionSheet.Button.cancel()
+                ])
+              })
                
               
             }
@@ -128,10 +142,11 @@ struct SideMenuView: View {
                 }
                 .padding(.leading,10)
             }
-// MARK: To Move left right Table List
+      
+ //MARK: To Move left right Table List
             .padding(.leading, 40)
-            .padding(.top, -20)
-            .padding(.trailing, -20)
+            .padding(.top, 30)
+            .padding(.trailing, 30)
             .padding(.bottom, 230)
         }
             if isShown
@@ -150,7 +165,9 @@ struct SideMenuView: View {
             )
         .padding(.top, -10)
         .navigationBarBackButtonHidden(true)
+  
     }
+
 }
 
 struct SideMenuView_Previews: PreviewProvider {
@@ -161,3 +178,5 @@ struct SideMenuView_Previews: PreviewProvider {
         SideMenuView(userName: $userName, mobileNumber: $mobileNumber)
     }
 }
+
+

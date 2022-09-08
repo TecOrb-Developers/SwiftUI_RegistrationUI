@@ -21,7 +21,7 @@ struct ContentView: View {
             
             ZStack{
                 
-                NavigationLink(destination: SwiftUIView3())
+                NavigationLink(destination: CountryCode())
                 {
                     Image("Tutorial_Screen_first")
                         .scaledToFill()

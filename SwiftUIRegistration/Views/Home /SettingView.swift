@@ -20,6 +20,7 @@ struct SettingView: View {
    var previousOption:[String] = ["Always","When Unlocked","Never"]
     var body: some View {
        
+        
         Form{
     //let Namee = self.userName == "" ? "\($name)":"\(userName)"
          //   self.Name = Namee

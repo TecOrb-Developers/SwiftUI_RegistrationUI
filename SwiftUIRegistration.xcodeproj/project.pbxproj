@@ -34,6 +34,10 @@
 		188CC1F728B7B11B0049DF68 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1F628B7B11B0049DF68 /* SettingView.swift */; };
 		188CC1F928B8D2EE0049DF68 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1F828B8D2EE0049DF68 /* CameraButtonView.swift */; };
 		188CC1FB28B8E34F0049DF68 /* gallerypicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1FA28B8E34F0049DF68 /* gallerypicker.swift */; };
+		188CC1FD28B94BB80049DF68 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CC1FC28B94BB80049DF68 /* ProfileView.swift */; };
+		18DF629628C9B919001C2C66 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF629528C9B919001C2C66 /* CountryCode.swift */; };
+		18DF629828C9B98C001C2C66 /* CountryFlagCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF629728C9B98B001C2C66 /* CountryFlagCode.swift */; };
+		18DF629C28C9C4A5001C2C66 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF629B28C9C4A5001C2C66 /* DatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		188CC1F628B7B11B0049DF68 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		188CC1F828B8D2EE0049DF68 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
 		188CC1FA28B8E34F0049DF68 /* gallerypicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gallerypicker.swift; sourceTree = "<group>"; };
+		188CC1FC28B94BB80049DF68 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		18DF629528C9B919001C2C66 /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
+		18DF629728C9B98B001C2C66 /* CountryFlagCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagCode.swift; sourceTree = "<group>"; };
+		18DF629B28C9C4A5001C2C66 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,8 @@
 				182F1F5728B61FA4006196E5 /* ResetPasswordView.swift */,
 				182F1F5928B61FAE006196E5 /* CreatePassWordView.swift */,
 				182F1F5528B61F98006196E5 /* SwiftUIView1.swift */,
+				18DF629528C9B919001C2C66 /* CountryCode.swift */,
+				18DF629B28C9C4A5001C2C66 /* DatePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +214,7 @@
 				182F1F6928B62005006196E5 /* Navigate.swift */,
 				182F1F6728B61FFC006196E5 /* Validation.swift */,
 				188CC1FA28B8E34F0049DF68 /* gallerypicker.swift */,
+				18DF629728C9B98B001C2C66 /* CountryFlagCode.swift */,
 			);
 			path = HelpingFiles;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 			children = (
 				182F1F7228B74BBA006196E5 /* HomeView.swift */,
 				182F1F7428B77531006196E5 /* SideMenuView.swift */,
+				188CC1FC28B94BB80049DF68 /* ProfileView.swift */,
 				188CC1F628B7B11B0049DF68 /* SettingView.swift */,
 				188CC1F828B8D2EE0049DF68 /* CameraButtonView.swift */,
 			);
@@ -353,19 +365,23 @@
 				188CC1F728B7B11B0049DF68 /* SettingView.swift in Sources */,
 				182F1F5628B61F98006196E5 /* SwiftUIView1.swift in Sources */,
 				182F1F6628B61FEB006196E5 /* OtpView.swift in Sources */,
+				18DF629828C9B98C001C2C66 /* CountryFlagCode.swift in Sources */,
 				182F1F6228B61FD4006196E5 /* SwiftUIView3.swift in Sources */,
 				182F1F7528B77531006196E5 /* SideMenuView.swift in Sources */,
+				18DF629C28C9C4A5001C2C66 /* DatePicker.swift in Sources */,
 				182F1F6828B61FFC006196E5 /* Validation.swift in Sources */,
 				182F1F5428B61F7E006196E5 /* Model.swift in Sources */,
 				182F1F6C28B6200D006196E5 /* TextFieldCustome.swift in Sources */,
 				182F1F5828B61FA4006196E5 /* ResetPasswordView.swift in Sources */,
 				182F1F6E28B62016006196E5 /* BackButton.swift in Sources */,
+				18DF629628C9B919001C2C66 /* CountryCode.swift in Sources */,
 				182F1F7328B74BBA006196E5 /* HomeView.swift in Sources */,
 				188CC1FB28B8E34F0049DF68 /* gallerypicker.swift in Sources */,
 				188CC1F928B8D2EE0049DF68 /* CameraButtonView.swift in Sources */,
 				182F1F6428B61FE3006196E5 /* SignUpView.swift in Sources */,
 				182F1F2928B617FF006196E5 /* ContentView.swift in Sources */,
 				182F1F2728B617FF006196E5 /* SwiftUIRegistrationApp.swift in Sources */,
+				188CC1FD28B94BB80049DF68 /* ProfileView.swift in Sources */,
 				182F1F6A28B62005006196E5 /* Navigate.swift in Sources */,
 				182F1F5A28B61FAE006196E5 /* CreatePassWordView.swift in Sources */,
 				182F1F6028B61FCB006196E5 /* ForgotPasswordView.swift in Sources */,
