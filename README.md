@@ -1,11 +1,11 @@
 
 # CountryPicker for SwiftUI
 #This contain two files one is Uikit files and Other
-is SwiftUi Files
+is SwiftUi Files 
 
 # How To Use
 Firstly Add CountryPicker Package in Project and Add 
-both files in you project Simply
+both files in you project Simply or Simply copy ,paste for files
 
 # 1st files UiKit
 
