@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUIRegistrationApp: App {
     var body: some Scene {
         WindowGroup {
-            CountryCode()
+            CountryPickerView()
+            //SwiftUIView5()
         }
     }
 }

@@ -131,7 +131,7 @@ struct login : View {
                 {
                     Picker("Country", selection: $selectedCountry) {
                         ForEach(getLocales(), id: \.id) { country in
-                            Text(country.id).tag(country.id)
+                            Text(country.phoneCode).tag(country.id)
                             //  Text(country.phoneCode).tag(country.phoneCode)
                         }
                     }
@@ -266,5 +266,9 @@ fileprivate func getLocales() -> [Country] {
         .filter { $0 != "United States"}
         .compactMap {
             Country(id: $0,name: Locale.current.localizedString(forRegionCode: $0) ?? $0, phoneCode: $0)}
-    return [Country(id: "US",name: Locale.current.localizedString(forRegionCode: "US") ?? "United States", phoneCode: "+91")] + locales
+    debugPrint(locales)
+    return [Country(id: "US",name: Locale.current.localizedString(forRegionCode: "US") ?? "United States", phoneCode: Locale.current.localizedString(forRegionCode: "US") ?? "")] + locales
+    
+  //  return [Country(id: $0,name: Locale.current.localizedString(forRegionCode: $0) ?? $0, phoneCode: $0)]
+    
 }
