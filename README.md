@@ -7,10 +7,9 @@ is SwiftUi Files
 Firstly Add CountryPicker Package in Project and Add 
 both files in you project Simply
 
-1st files
+# 1st files UiKit
 
 import UIKit
-
 import CountryPicker
 
 class ViewController: UIViewController {
@@ -35,11 +34,10 @@ extension ViewController: CountryPickerDelegate {
 }
 
 
-# 2nd Files
+# 2nd Files SwiftUi
 
 
 import SwiftUI
-
 import CountryPicker
 
 struct CountryPickerView: View {
